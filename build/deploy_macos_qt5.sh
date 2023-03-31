@@ -20,5 +20,8 @@ fi
 
 export PATH=$QTDIR/bin:$PATH
 
-rm liteide/LiteIDE.app/Contents/Resources/qt.conf
+rm -rf liteide/LiteIDE.app/Contents/Resources/qt.conf
+echo "Need sign the app before release, e.g,"
+echo "macdeployqt liteide/LiteIDE.app -sign-for-notarization=\"Apple Development: xxx (G78xxxxJ)\" "
 macdeployqt liteide/LiteIDE.app
+
